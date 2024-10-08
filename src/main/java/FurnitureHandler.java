@@ -6,7 +6,7 @@ public class FurnitureHandler {
     private final List<Furniture> furnitureList;
 
     public FurnitureHandler() {
-        furnitureList = new ArrayList<Furniture>();
+        furnitureList = new ArrayList<>();
     }
 
     public void addFurniture(Furniture furniture) {
