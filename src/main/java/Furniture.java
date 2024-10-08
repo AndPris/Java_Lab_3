@@ -5,6 +5,14 @@ public class Furniture implements Comparable<Furniture> {
     private final int price;
     private final String manufacturer;
 
+     /**
+      * Constructor.
+      * @param name name of furniture
+      * @param color color of furniture
+      * @param type type of furniture
+      * @param price price of furniture
+      * @param manufacturer manufacturer of furniture
+     */
     public Furniture(String name, String color, String type, int price, String manufacturer) {
         this.name = name;
         this.color = color;
@@ -13,11 +21,21 @@ public class Furniture implements Comparable<Furniture> {
         this.manufacturer = manufacturer;
     }
 
+    /**
+     * Return String representation of furniture object
+     * @return String
+     */
     @Override
     public String toString() {
         return "Name: " + name + ", Color: " + color + ", Type: " + type + ", Price: " + price + ", Manufacturer: " + manufacturer;
     }
 
+    /**
+     * Compares furniture object with another furniture object by name. If names are equal then compares by
+     * price in reverse order.
+     * @param o the object to be compared.
+     * @return int
+     */
     @Override
     public int compareTo(Furniture o) {
         if(this.name.compareTo(o.name) > 0)
@@ -34,6 +52,11 @@ public class Furniture implements Comparable<Furniture> {
         return 0;
     }
 
+    /**
+     * Check if two objects are equal.
+     * @param o the object to be compared
+     * @return boolean
+     */
     @Override
     public final boolean equals(Object o) {
         if (this == o)
@@ -74,6 +97,10 @@ public class Furniture implements Comparable<Furniture> {
         return true;
     }
 
+    /**
+     * Returns hash code of object.
+     * @return int
+     */
     @Override
     public final int hashCode() {
         int result = 31;

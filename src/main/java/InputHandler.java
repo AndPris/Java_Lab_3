@@ -1,6 +1,12 @@
 import java.util.Scanner;
 
 public class InputHandler {
+    /**
+     * Asks user to enter integer value greater than provided <code>minimalValue</code>.
+     * If input is incorrect then prints error and asks user to reenter data.
+     * @param minimalValue lower bound of user input
+     * @return int
+     */
     public static int getUserInput(int minimalValue) {
         Scanner scanner = new Scanner(System.in);
         int userInput = 0;
