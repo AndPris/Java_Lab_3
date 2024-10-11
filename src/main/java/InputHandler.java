@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+/**
+ * Class which takes user input and validates it.
+ */
 public class InputHandler {
     /**
      * Asks user to enter integer value greater than provided <code>minimalValue</code>.

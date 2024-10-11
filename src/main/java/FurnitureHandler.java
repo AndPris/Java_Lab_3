@@ -2,6 +2,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Class which operates with list of Furniture objects.
+ * @see Furniture
+ */
 public class FurnitureHandler {
     private final List<Furniture> furnitureList;
 

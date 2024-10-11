@@ -1,3 +1,6 @@
+/**
+ * Class, which represents furniture.
+ */
 public class Furniture implements Comparable<Furniture> {
     private final String name;
     private final String color;
