@@ -5,6 +5,9 @@ import java.util.Arrays;
  * @see Furniture
  */
 public class FurnitureHandler {
+    /**
+     * Array of furniture objects.
+     */
     private final Furniture[] furnitureArray;
 
     /**

@@ -2,10 +2,29 @@
  * Class, which represents furniture.
  */
 public class Furniture implements Comparable<Furniture> {
+    /**
+     * Name of furniture.
+     */
     private final String name;
+
+    /**
+     * Color of furniture.
+     */
     private final String color;
+
+    /**
+     * Type of furniture.
+     */
     private final String type;
+
+    /**
+     * Price of furniture.
+     */
     private final int price;
+
+    /**
+     * Manufacturer of furniture.
+     */
     private final String manufacturer;
 
      /**
