@@ -9,18 +9,22 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        FurnitureHandler handler = new FurnitureHandler();
-        handler.addFurniture(new Furniture("Chair", "Brown", "Kitchen furniture", 1000, "Luka furniture"));
-        handler.addFurniture(new Furniture("Chair", "Black", "Kitchen furniture", 800, "Luka furniture"));
-        handler.addFurniture(new Furniture("Table", "Brown", "Kitchen furniture", 1500, "Luka furniture"));
-        handler.addFurniture(new Furniture("Table", "White", "Kitchen furniture", 2000, "Luka furniture"));
-        handler.addFurniture(new Furniture("Cupboard", "Black", "Kitchen furniture", 2000, "Luka furniture"));
-        handler.addFurniture(new Furniture("Cupboard", "White", "Kitchen furniture", 2500, "Luka furniture"));
-        handler.addFurniture(new Furniture("Cupboard", "Brown", "Kitchen furniture", 1800, "Luka furniture"));
+        Furniture[] furnitureArray = new Furniture[7];
+        furnitureArray[0] = new Furniture("Chair", "Brown", "Kitchen furniture", 1000, "Luka furniture");
+        furnitureArray[1] = new Furniture("Chair", "Black", "Kitchen furniture", 800, "Luka furniture");
+        furnitureArray[2] = new Furniture("Table", "Brown", "Kitchen furniture", 1500, "Luka furniture");
+        furnitureArray[3] = new Furniture("Table", "White", "Kitchen furniture", 2000, "Luka furniture");
+        furnitureArray[4] = new Furniture("Cupboard", "Black", "Kitchen furniture", 2000, "Luka furniture");
+        furnitureArray[5] = new Furniture("Cupboard", "White", "Kitchen furniture", 2500, "Luka furniture");
+        furnitureArray[6] = new Furniture("Cupboard", "Brown", "Kitchen furniture", 1800, "Luka furniture");
 
+        FurnitureHandler handler = new FurnitureHandler(furnitureArray);
+
+        System.out.println("Initial array:");
         handler.displayFurnitureList();
         System.out.println("\n==================================================\n");
         handler.sortNameAscendingPriceDescending();
+        System.out.println("Array sorted by name ascending and price descending:");
         handler.displayFurnitureList();
         System.out.println("\n==================================================\n");
 
@@ -31,6 +35,7 @@ public class Main {
         String manufacturer;
 
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter details of furniture to find: ");
         System.out.println("Name: ");
         name = scanner.nextLine();
         System.out.println("Color: ");

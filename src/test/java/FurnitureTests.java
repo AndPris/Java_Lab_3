@@ -8,11 +8,12 @@ public class FurnitureTests {
 
     @BeforeEach
     void setUp() {
-        handler = new FurnitureHandler();
-        handler.addFurniture(new Furniture("Chair", "Brown", "Kitchen furniture", 1000, "Luka furniture"));
-        handler.addFurniture(new Furniture("Chair", "Black", "Kitchen furniture", 800, "Luka furniture"));
-        handler.addFurniture(new Furniture("Table", "Brown", "Kitchen furniture", 1500, "Luka furniture"));
-        handler.addFurniture(new Furniture("Table", "White", "Kitchen furniture", 2000, "Luka furniture"));
+        Furniture[] furnitureArray = new Furniture[4];
+        furnitureArray[0] = new Furniture("Chair", "Brown", "Kitchen furniture", 1000, "Luka furniture");
+        furnitureArray[1] = new Furniture("Chair", "Black", "Kitchen furniture", 800, "Luka furniture");
+        furnitureArray[2] = new Furniture("Table", "Brown", "Kitchen furniture", 1500, "Luka furniture");
+        furnitureArray[3] = new Furniture("Table", "White", "Kitchen furniture", 2000, "Luka furniture");
+        handler = new FurnitureHandler(furnitureArray);
     }
 
     @Test

@@ -1,50 +1,47 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.Arrays;
 
 /**
- * Class which operates with list of Furniture objects.
+ * Class which operates with array of Furniture objects.
  * @see Furniture
  */
 public class FurnitureHandler {
-    private final List<Furniture> furnitureList;
+    private final Furniture[] furnitureArray;
 
     /**
-     * Constructor. Creates empty list for storing furniture objects.
+     * Constructor. Takes array of furniture objects.
+     * @param furnitureArray array of furniture objects
      */
-    public FurnitureHandler() {
-        furnitureList = new ArrayList<>();
+    public FurnitureHandler(Furniture[] furnitureArray) {
+        this.furnitureArray = furnitureArray;
     }
 
     /**
-     * Adds <code>furniture</code> object to list.
-     * @param furniture furniture object to add
-     */
-    public void addFurniture(Furniture furniture) {
-        furnitureList.add(furniture);
-    }
-
-    /**
-     * Displays list of furniture objects in console.
+     * Displays array of furniture objects in console.
      */
     public void displayFurnitureList() {
-        furnitureList.forEach(System.out::println);
+        for(Furniture furniture : furnitureArray)
+            System.out.println(furniture);
     }
 
     /**
-     * Sort list of furniture objects according to compareTo method implementation
+     * Sort array of furniture objects according to compareTo method implementation
      * @see Furniture#compareTo(Furniture) 
      */
     public void sortNameAscendingPriceDescending() {
-        Collections.sort(furnitureList);
+        Arrays.sort(furnitureArray);
     }
 
     /**
-     * Check if <code>furniture</code> object is present in list.
-     * @param furniture object to find in list
+     * Check if <code>furniture</code> object is present in array.
+     * @param furniture object to find in array
      * @return boolean
      */
     public boolean contains(Furniture furniture) {
-        return furnitureList.contains(furniture);
+        for(Furniture furniture1 : furnitureArray) {
+            if(furniture1.equals(furniture))
+                return true;
+        }
+
+        return false;
     }
 }
